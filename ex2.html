@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>User:</p>
+<input type="text" id="u">
+<br>
+<p>Password:</p>
+<input type="text" id="p">
+<br>
+<button type="button" onclick="check()">Log in</button>
+<div id="d"> </div>
+</body>
+</html>
+<script>
+  function check(){
+    let userName = document.getElementById('u').value
+    let password = document.getElementById('p').value
+    if (userName == 'Admin ' ){
+      document.getElementById('d').innerHTML = 'Password Required'
+    }
+    else if(password == 'TheMaster'){
+      document.getElementById('d').innerHTML = 'Welcome'
+    }
+    else if( password == 'Null'){
+      document.getElementById('d').innerHTML = 'Canceled'
+    }
+
+      if(userName == 'Null'){
+        document.getElementById('d').innerHTML = 'Canceled'
+      }
+      else{
+      document.getElementById('d').innerHTML = 'I don’t know you'
+    }
+  }
+</script>
